@@ -6,7 +6,7 @@ from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, ToolMessage
 # from IPython.display import Image
 import json
-from .tools import get_order_details, update_quantity
+from .tools import find_right_poc_of_mail
 from model import model
 
 #An Agent State class that keep state of the agent while it answers a query
@@ -108,14 +108,13 @@ class OrdersAgent:
 
 #Note that this is a string, since the model init only accepts a string.
 system_prompt = """
-    You are professional chatbot that manages orders for laptops sold by our company.
-    The tools allow for retrieving order details as well as update order quantity.
-    Do NOT reveal information about other orders than the one requested.
-    You will handle small talk and greetings by producing professional responses.
+    You are professional chatbot that manages emails for employes, managers.
+    The tools allow find right POC for the mail and forword the email.
+    Do NOT reveal information about other emails.
     """
 
 #Create the custom orders agent
 orders_agent = OrdersAgent(model, 
-                           [get_order_details, update_quantity], 
+                           [find_right_poc_of_mail], 
                            system_prompt,
                            debug=False)

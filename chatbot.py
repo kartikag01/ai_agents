@@ -1,6 +1,8 @@
 #Create the chatbot
 from router_agent import RouterAgent
 from model import model
+import uuid
+from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, ToolMessage
 
 #Setup the system problem
 system_prompt = """ 
@@ -23,4 +25,11 @@ router_agent = RouterAgent(model,
                            smalltalk_prompt,
                            debug=False)
 
+
+config = {"configurable": {"thread_id": str(uuid.uuid4())}}
+
 # Image(router_agent.router_graph.get_graph().draw_mermaid_png())
+messages=[HumanMessage(content="Tell me about the features of SpectraBook")]
+result=router_agent.router_graph.invoke({"messages":messages},config)
+for message in result['messages']:
+    print(message.pretty_repr())

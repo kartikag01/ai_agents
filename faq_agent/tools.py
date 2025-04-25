@@ -10,16 +10,14 @@ from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from model import embedding
 
 #Load the laptop product pricing CSV into a Pandas dataframe.
 product_pricing_df = pd.read_csv("data/Laptop pricing.csv")
 print(product_pricing_df)
 
 #Setup the Embedding
-embedding = AzureOpenAIEmbeddings(
-    model="text-embedding-3-large",
-    openai_api_version="2023-05-15"
-)
+
 
 @tool
 def get_laptop_price(laptop_name:str) -> int :
