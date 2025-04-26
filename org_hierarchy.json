@@ -1,0 +1,34 @@
+{
+    "name": "Ananya Sharma",
+    "title": "CEO",
+    "email": "ananya.sharma@company.com",
+    "employees": [
+      {
+        "name": "Ravi Verma",
+        "title": "CTO",
+        "email": "ravi.verma@company.com",
+        "employees": [
+          {
+            "name": "Mehul Desai",
+            "title": "Senior Developer",
+            "email": "mehul.desai@company.com",
+            "employees": []
+          }
+        ]
+      },
+      {
+        "name": "Priya Iyer",
+        "title": "CFO",
+        "email": "priya.iyer@company.com",
+        "employees": [
+          {
+            "name": "Neha Kapoor",
+            "title": "Accountant",
+            "email": "neha.kapoor@company.com",
+            "employees": []
+          }
+        ]
+      }
+    ]
+  }
+  
