@@ -80,18 +80,8 @@ const EnhancedScheduling: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ scale: 1.02 }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                onDragEnd={(event, info) => {
-                  const dragDistance = info.offset.x;
-                  if (dragDistance > 100) {
-                    handleOk(idx); // Drag to the right -> OK
-                  } else if (dragDistance < -100) {
-                    handleCancel(idx); // Drag to the left -> Cancel
-                  }
-                }}
                 transition={{ duration: 0.5, type: "spring" }}
-                className="relative bg-gray-100 p-4 rounded-2xl shadow-md overflow-hidden group hover:shadow-2xl border-2 border-transparent hover:border-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 transition-all duration-300 cursor-pointer"
+                className="relative bg-gray-100 p-6 rounded-2xl shadow-md overflow-hidden group hover:shadow-2xl border-2 border-transparent hover:border-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 transition-all duration-300 cursor-pointer"
               >
                 {/* Glow effect for pending cards */}
                 <motion.div
@@ -112,22 +102,23 @@ const EnhancedScheduling: React.FC = () => {
                 {/* Main Content */}
                 <div className="grid grid-cols-2 gap-4 relative z-10">
                   <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">Subject:</p>
-                    <p className="text-gray-800 text-sm">{task.subject || task.event_title}</p>
+                    <p className="text-indigo-600 text-sm font-semibold mb-2">Subject:</p>
+                    <p className="text-gray-900 text-lg font-medium">{task.subject || task.event_title}</p>
                   </div>
 
                   <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">From:</p>
-                    <p className="text-gray-700 text-sm">{task.from || task.organizer}</p>
+                    <p className="text-indigo-600 text-sm font-semibold mb-2">From:</p>
+                    <p className="text-gray-800 text-lg font-medium">{task.from || task.organizer}</p>
                   </div>
 
                   <div>
-                    <p className="text-gray-500 text-xs mt-2">{formatDate(task.timestamp)}</p>
+                    <p className="text-indigo-600 text-sm font-semibold mb-2">Date:</p>
+                    <p className="text-gray-700 text-lg">{formatDate(task.timestamp)}</p>
                   </div>
 
                   <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">Action:</p>
-                    <p className="text-gray-700 text-sm">{task.action_required}</p>
+                    <p className="text-indigo-600 text-sm font-semibold mb-2">Action Required:</p>
+                    <p className="text-gray-700 text-lg">{task.action_required}</p>
                   </div>
                 </div>
 
@@ -137,7 +128,7 @@ const EnhancedScheduling: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handleOk(idx)}
-                    className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-xs rounded-full shadow-md"
+                    className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-xs font-semibold rounded-full shadow-md"
                   >
                     OK
                   </motion.button>
@@ -146,7 +137,7 @@ const EnhancedScheduling: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => handleCancel(idx)}
-                    className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-xs rounded-full shadow-md"
+                    className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-xs font-semibold rounded-full shadow-md"
                   >
                     Cancel
                   </motion.button>

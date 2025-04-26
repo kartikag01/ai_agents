@@ -1,0 +1,31 @@
+{
+    "human_action_needed": [
+      {
+        "subject": "Staffing request for Project Orion - Need Immediate Replacement",
+        "from": "projectlead@zs.com",
+        "action_required": "Forward to avneet@zs.com.",
+        "timestamp": "2025-04-26T09:05:00Z"
+      },
+      {
+        "subject": "Approval Request: Grant VPN Access to New Interns - Project Helix",
+        "from": "itadmin@company.com",
+        "action_required": "Approve VPN access.",
+        "timestamp": "2025-04-26T09:05:00Z"
+      },
+      {
+        "subject": "New Client Projects Review Meeting - New Quarter Planning",
+        "from": "ceo@zs.com",
+        "ai_analysis": "Calendar invite about upcoming staffing plans lacks an assigned owner to drive follow-ups.",
+        "action_required": "Bock time to Prepare Deck.",
+        "timestamp": "2025-04-26T09:50:00Z"
+      },
+      {
+        "event_title": "Grant Access: Finance Systems for New Project Leads",
+        "organizer": "finance@company.com",
+        "ai_analysis": "Event needs manager approval to grant financial system access to new project leads.",
+        "action_required": "Approve finance.",
+        "timestamp": "2025-04-26T10:30:00Z"
+      }
+    ]
+  }
+ 
