@@ -1,171 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import schedulingData from '../assets/scheduling.json';
+import { Link } from "react-router-dom";
 
-interface ActionItem {
-  subject?: string;
-  from?: string;
-  event_title?: string;
-  organizer?: string;
-  action_required: string;
-  timestamp: string;
-}
-
-const EnhancedScheduling: React.FC = () => {
-  const [tasks, setTasks] = useState<ActionItem[]>([]);
-  const [tooltip, setTooltip] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (schedulingData && schedulingData.human_action_needed) {
-      setTasks(schedulingData.human_action_needed);
-    }
-  }, []);
-
-  const handleOk = (index: number) => {
-    setTooltip("✅ Task marked as Done!");
-    setTimeout(() => {
-      removeTask(index);
-      setTooltip(null);
-    }, 800);
-  };
-
-  const handleCancel = (index: number) => {
-    setTooltip("❌ Task Cancelled.");
-    setTimeout(() => {
-      removeTask(index);
-      setTooltip(null);
-    }, 800);
-  };
-
-  const removeTask = (index: number) => {
-    setTasks((prev) => prev.filter((_, i) => i !== index));
-  };
-
-  const formatDate = (timestamp: string) => {
-    const date = new Date(timestamp);
-    return date.toLocaleDateString('en-US', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric',
-    });
-  };
-
+const Header = () => {
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg max-w-6xl mx-auto mt-10 relative">
-      <h1 className="text-3xl font-bold text-indigo-600 mb-6 text-center">⚡ Attention Needed</h1>
+    <header className="flex justify-between items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md">
+      {/* Logo Section */}
+      <div className="flex items-center space-x-3">
+        <span className="font-extrabold text-2xl tracking-wide hover:scale-105 transform transition-transform duration-300">
+          Mailendar AI
+        </span>
+      </div>
 
-      {/* Tooltip */}
-      <AnimatePresence>
-        {tooltip && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-            className="absolute top-4 right-4 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-md z-50 text-sm"
-          >
-            {tooltip}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Main Navigation */}
+      <nav className="flex items-center space-x-8">
+        <Link
+          to="/weekly-actions"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
+          Weekly Actions
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+        </Link>
 
-      {/* Task Cards */}
-      <AnimatePresence>
-        {tasks.length > 0 ? (
-          <div className="space-y-6">
-            {tasks.map((task, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                whileHover={{ scale: 1.02 }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                onDragEnd={(event, info) => {
-                  const dragDistance = info.offset.x;
-                  if (dragDistance > 100) {
-                    handleOk(idx); // Drag to the right -> OK
-                  } else if (dragDistance < -100) {
-                    handleCancel(idx); // Drag to the left -> Cancel
-                  }
-                }}
-                transition={{ duration: 0.5, type: "spring" }}
-                className="relative bg-gray-100 p-4 rounded-2xl shadow-md overflow-hidden group hover:shadow-2xl border-2 border-transparent hover:border-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 transition-all duration-300 cursor-pointer"
-              >
-                {/* Glow effect for pending cards */}
-                <motion.div
-                  animate={{
-                    boxShadow: [
-                      '0 0 0px #c084fc',
-                      '0 0 10px #c084fc',
-                      '0 0 0px #c084fc',
-                    ]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                  }}
-                  className="absolute inset-0 rounded-2xl pointer-events-none"
-                />
+      
+        <Link
+          to="/meetings"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
+          Meeting Summarizer
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+        </Link>
 
-                {/* Main Content */}
-                <div className="grid grid-cols-2 gap-4 relative z-10">
-                  <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">Subject:</p>
-                    <p className="text-gray-800 text-sm">{task.subject || task.event_title}</p>
-                  </div>
+        <Link
+          to="/enhanced-scheduling"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
+          Attention Needed
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+        </Link>
 
-                  <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">From:</p>
-                    <p className="text-gray-700 text-sm">{task.from || task.organizer}</p>
-                  </div>
+        {/* <Link
+          to="/attendance-prediction"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
+          Prediction
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+        </Link> */}
+      </nav>
 
-                  <div>
-                    <p className="text-gray-500 text-xs mt-2">{formatDate(task.timestamp)}</p>
-                  </div>
+      {/* Secondary Links */}
+      <div className="flex items-center space-x-6">
+        <Link
+          to="/about"
+          className="text-white hover:text-green-300 transition-colors duration-300 text-base relative group transform hover:scale-105 transition-transform"
+        >
+          About
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-300 transition-all group-hover:w-full"></span>
+        </Link>
 
-                  <div>
-                    <p className="text-indigo-500 text-xs font-semibold mb-1">Action:</p>
-                    <p className="text-gray-700 text-sm">{task.action_required}</p>
-                  </div>
-                </div>
-
-                {/* Slide to Reveal Buttons */}
-                <div className="absolute top-0 right-0 h-full flex items-center space-x-2 opacity-0 group-hover:opacity-100 pr-4 transition-all duration-500 z-20">
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => handleOk(idx)}
-                    className="px-3 py-1 bg-green-500 hover:bg-green-600 text-white text-xs rounded-full shadow-md"
-                  >
-                    OK
-                  </motion.button>
-
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => handleCancel(idx)}
-                    className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white text-xs rounded-full shadow-md"
-                  >
-                    Cancel
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        ) : (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center text-gray-600 text-sm"
-          >
-            No tasks found.
-          </motion.p>
-        )}
-      </AnimatePresence>
-    </div>
+        <Link
+          to="/login"
+          className="text-white hover:text-green-300 transition-colors duration-300 text-base relative group transform hover:scale-105 transition-transform"
+        >
+          Login
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-300 transition-all group-hover:w-full"></span>
+        </Link>
+      </div>
+    </header>
   );
 };
 
-export default EnhancedScheduling;
+export default Header;
