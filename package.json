@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "framer-motion": "^12.9.2"
+    "framer-motion": "^12.9.2",
+    "jspdf": "^3.0.1"
   }
 }

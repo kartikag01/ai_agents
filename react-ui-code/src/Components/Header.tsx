@@ -20,13 +20,7 @@ const Header = () => {
           <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
         </Link>
 
-        {/* <Link
-          to="/notifications"
-          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
-        >
-          Notifications
-          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-        </Link> */}
+      
         <Link
           to="/meetings"
           className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
