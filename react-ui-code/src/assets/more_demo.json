@@ -1,0 +1,56 @@
+{
+    "daily_insights": [
+      {
+        "title": "Your calendar looks manageable today. Great opportunity to focus deeply!",
+        "action": [
+          { "title": "Block 2 hours for deep work." }
+        ]
+      },
+      {
+        "title": "You have meetings starting post-lunch.",
+        "action": [
+          { "title": "Use your morning to tackle high-priority tasks." }
+        ]
+      },
+      {
+        "title": "Most meetings are under 30 minutes.",
+        "action": [
+          { "title": "Quick meetings = faster decisions. Stay sharp!" }
+        ]
+      },
+      {
+        "title": "Last meeting ends by 5PM.",
+        "action": [
+          { "title": "Reflect on today’s wins and set tomorrow’s goals." }
+        ]
+      }
+    ],
+    "human_action_needed": [
+      {
+        "subject": "RE: [ACTION REQUIRED] : Confirm Attendance & Food Preference – Quick Survey",
+        "from": "/O=EXCHANGELABS/.../CN=RECIPIENTS/...",
+        "action_required": "Confirm attendance.",
+        "timestamp": "2025-04-21T20:00:14.635000Z"
+      },
+      {
+        "subject": "[ACTION REQUIRED] : Confirm Attendance & Food Preference – Quick Survey",
+        "from": "/O=EXCHANGELABS/.../CN=RECIPIENTS/...",
+        "action_required": "Confirm attendance.",
+        "timestamp": "2025-04-21T19:55:44.266000Z"
+      },
+      {
+        "subject": "Vehicle Changed - Your Cab Request - Apr 18 2025 9:10PM",
+        "from": "do-not-reply@routematic.com",
+        "action_required": "Process request.",
+        "timestamp": "2025-04-19T01:55:10.533000Z"
+      },
+      {
+        "subject": "Your Cab Request - Apr 18 2025 9:10PM",
+        "from": "do-not-reply@routematic.com",
+        "action_required": "Process request.",
+        "timestamp": "2025-04-19T01:40:20.406000Z"
+      }
+      // ... (other similar entries)
+    ]
+  }
+  
