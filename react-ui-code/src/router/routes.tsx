@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Assistance from "../pages/Assistance";
 import WeeklyActions from "../pages/WeeklyActions";
 import Notifications from "../pages/Notification";
+import MeetingSummariser from "../pages/meetingSummariser";
 
 
 const AppRoutes = () => {
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/assistance" element={<Assistance />} />
       <Route path="/weekly-actions" element={<WeeklyActions />} />
       <Route path="/notifications" element={<Notifications />} />
+      <Route path="/meetings" element={<MeetingSummariser />} />
     </Routes>
   );
 };
