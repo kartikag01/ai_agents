@@ -2,25 +2,50 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center p-4 bg-blue-600 text-white">
-      <div className="flex items-center">
-       
-        <span className="font-bold text-2xl">AI Coach</span>
+    <header className="flex justify-between items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md">
+      {/* Logo Section */}
+      <div className="flex items-center space-x-3">
+        <span className="font-extrabold text-2xl tracking-wide hover:scale-105 transform transition-transform duration-300">
+          AI Coach
+        </span>
       </div>
-      <div className="flex ">
-        {/* <Link to="/assistance" className="pl-4">
-          Assistance
-        </Link> */}
-        <Link to="/weekly-actions" className="pl-4">
+
+      {/* Main Navigation */}
+      <nav className="flex items-center space-x-8">
+        <Link
+          to="/weekly-actions"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
           Weekly Actions
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
         </Link>
-        <Link to="/notifications" className="pl-4">
+
+        <Link
+          to="/notifications"
+          className="text-white hover:text-yellow-300 transition-colors duration-300 text-lg font-medium relative group transform hover:scale-105 transition-transform"
+        >
           Notifications
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
         </Link>
-      </div>
-      <div className="flex space-x-4">
-        <Link to="/about">About</Link>
-        <Link to="/login">Login</Link>
+      </nav>
+
+      {/* Secondary Links */}
+      <div className="flex items-center space-x-6">
+        <Link
+          to="/about"
+          className="text-white hover:text-green-300 transition-colors duration-300 text-base relative group transform hover:scale-105 transition-transform"
+        >
+          About
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-300 transition-all group-hover:w-full"></span>
+        </Link>
+
+        <Link
+          to="/login"
+          className="text-white hover:text-green-300 transition-colors duration-300 text-base relative group transform hover:scale-105 transition-transform"
+        >
+          Login
+          <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-300 transition-all group-hover:w-full"></span>
+        </Link>
       </div>
     </header>
   );
