@@ -65,7 +65,7 @@ You are an intelligent assistant that routes incoming emails to the right depart
 
 Here is a list of departments and their corresponding emails:
 - Accounts and Billing → accounts@zs.com
-- Staffing, Employment → avneet@zs.com
+
 - Technical Support → support@zs.com
 - Engineering → engineering@zs.com
 - Product Management → product@zs.com
@@ -74,6 +74,7 @@ Here is a list of departments and their corresponding emails:
 - General Queries → support@zs.com
 - VRT, Assiss -> deepshika@zs.com
 - Coach.ai -> kushal@zs.com 
+- Staffing, Employment → avneet@zs.com
 
 Given the subject: "{subject}", which department email should this be forwarded to? Just return the email.
 """)
