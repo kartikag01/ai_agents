@@ -1,0 +1,74 @@
+{
+    "recurring_meeting": [
+        {
+            "meeting_id": 2,
+            "title": "Team Standup",
+            "start_time": "10:00AM",
+            "end_time": "10:30AM",
+            "to": ["arjun@company.com", "isha@company.com"],
+            "cc": ["neha@company.com"],
+            "attendance_status": "Low attendance",
+            "action": [
+                {
+                    "title": "Consider making it bi-weekly"
+                }
+            ]
+        },
+        {
+            "meeting_id": 3,
+            "title": "Project Sync",
+            "start_time": "2:00PM",
+            "end_time": "3:00PM",
+            "to": ["rohan@company.com", "priya@company.com"],
+            "cc": [],
+            "attendance_status": "Not attending",
+            "action": [
+                {
+                    "title": "Remove from Calendar"
+                }
+            ]
+        }
+    ],
+    "weekly_insights": [
+        {
+            "title": "Your calendar is 8% lighter compared to last week!",
+            "action": [
+                {
+                    "title": "Use this time to focus on high-priority tasks."
+                }
+            ]
+        },
+        {
+            "title": "You have 28 meetings scheduled this week.",
+            "action": [
+                {
+                    "title": "Block 2 hours for deep work on Wednesday afternoon."
+                }
+            ]
+        },
+        {
+            "title": "3 meetings last week had low participation.",
+            "action": [
+                {
+                    "title": "Review if these meetings are still necessary."
+                }
+            ]
+        },
+        {
+            "title": "No meetings scheduled Friday after 3PM.",
+            "action": [
+                {
+                    "title": "Plan admin tasks or early wrap-up."
+                }
+            ]
+        },
+        {
+            "title": "Follow-up needed with Ananya Sharma from Monday's client call.",
+            "action": [
+                {
+                    "title": "Schedule a 15-min catch-up tomorrow at 11AM?"
+                }
+            ]
+        }
+    ]
+}

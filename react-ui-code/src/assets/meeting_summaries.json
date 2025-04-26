@@ -1,0 +1,49 @@
+{
+    "meeting_summaries": [
+      {
+        "meeting_id": 101,
+        "title": "Client Strategy Review",
+        "date": "2025-04-22",
+        "attendees": ["ananya.sharma@zs.com", "rohit.mehta@zs.com", "client_a@client.com"],
+        "summary": "The meeting focused on reviewing progress toward quarterly strategic goals and identifying areas requiring course correction. Client provided feedback on the current roadmap, suggesting a clearer breakdown of deliverables and alignment with business KPIs. The team discussed improving cross-functional collaboration, particularly with the marketing and analytics teams, to ensure consistency across reporting metrics. Rohit presented a preliminary version of the Q2 roadmap which was well received but needed updates on timelines. The client emphasized the importance of proactive communication and requested regular check-ins. The action plan is to finalize and share the revised roadmap by next Monday along with an updated KPI tracker.",
+        "action_items": [
+          "Prepare updated roadmap deck - assigned to Rohit Mehta",
+          "Share Q1 KPI tracker with client - assigned to Ananya Sharma"
+        ],
+        "links": {
+          "meeting_notes": "https://zs.sharepoint.com/sites/projectx/Shared%20Documents/Client-Strategy-Notes-Apr22.docx",
+          "presentation_deck": "https://zs.sharepoint.com/sites/projectx/Shared%20Documents/Roadmap-Q2-Deck.pptx"
+        }
+      },
+      {
+        "meeting_id": 102,
+        "title": "Internal Sync: Product Team",
+        "date": "2025-04-23",
+        "attendees": ["mehul.desai@zs.com", "neha.kapoor@zs.com"],
+        "summary": "In this internal sync, the product team reviewed progress on the upcoming release scheduled for mid-May. Mehul presented the current sprint status, highlighting completed components and those still pending due to backend API delays. Neha raised concerns around UI inconsistencies and proposed a mid-sprint bug triage to tackle priority issues. There was agreement to realign with the backend team regarding API availability timelines. The group also discussed improving documentation, especially for new developers joining next sprint. A suggestion was made to conduct a brief onboarding walkthrough during the next team meeting. Key takeaways included updating the release timeline in Jira and setting up a checkpoint with engineering leads.",
+        "action_items": [
+          "Follow up with backend team on API availability",
+          "Update release plan in Jira"
+        ],
+        "links": {
+          "meeting_notes": "https://zs.sharepoint.com/sites/product/Shared%20Documents/Sync-Notes-Apr23.docx",
+          "recording": "https://zs.sharepoint.com/sites/product/Recordings/ProductSync-Apr23.mp4"
+        }
+      },
+      {
+        "meeting_id": 103,
+        "title": "Follow-up: Training Planning",
+        "date": "2025-04-24",
+        "attendees": ["priya.iyer@zs.com", "kartik.rao@zs.com", "ankit.jain@zs.com"],
+        "summary": "This follow-up focused on finalizing the onboarding and training modules for new joiners starting in May. Priya shared feedback from recent hires, pointing out gaps in the orientation content, especially around tooling and team-specific workflows. Kartik proposed a revised training plan broken into four core modules: ZS Tools, Project Processes, Team Structures, and Soft Skills. Ankit suggested assigning experienced mentors for each track. The group agreed to pilot the new format with the next batch and refine based on feedback. Final schedule and trainer assignments are to be completed by the end of this week, with review by HR leadership on Friday. A SharePoint folder will be created to host all training materials centrally.",
+        "action_items": [
+          "Draft training schedule - assigned to Kartik Rao",
+          "Finalize trainers for each module"
+        ],
+        "links": {
+          "training_plan_doc": "https://zs.sharepoint.com/sites/hr/Shared%20Documents/NewJoiner-TrainingPlan-Apr24.docx"
+        }
+      }
+    ]
+  }
+  

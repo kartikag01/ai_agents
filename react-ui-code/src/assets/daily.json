@@ -1,0 +1,44 @@
+{
+    "daily_insights": [
+        {
+            "title": "Nice! Your calendar’s 18% lighter today. Use that extra time to do something awesome!",
+            "action": [
+                {
+                    "title": "Keep it plan"
+                }
+            ]
+        },
+        {
+            "title": "You have back-to-back meetings from 2PM to 5PM.",
+            "action": [
+                {
+                    "title": "Add a 15-min break between calls to reset."
+                }
+            ]
+        },
+        {
+            "title": "First meeting starts at 11AM today.",
+            "action": [
+                {
+                    "title": "Great time to plan your top 3 priorities for the day."
+                }
+            ]
+        },
+        {
+            "title": "Last meeting ends by 3PM.",
+            "action": [
+                {
+                    "title": "Consider blocking an hour for deep work or personal reflection."
+                }
+            ]
+        },
+        {
+            "title": "Yesterday’s meeting with Ankit was short—only 10 mins.",
+            "action": [
+                {
+                    "title": "Check if a follow-up is needed."
+                }
+            ]
+        }
+    ]
+}
